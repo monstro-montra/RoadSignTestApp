@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RoadSignTestApp</string>
+    <string name="app_name">Road Sign Test</string>
     <string name="number_of_questions">Number of Questions</string>
     <string name="question">Question</string>
     <string name="fork_sign">Fork Sign</string>
