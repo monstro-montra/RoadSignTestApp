@@ -108,10 +108,26 @@
         android:padding="1dp"
         android:text="@string/submit"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/previous"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/image_question"
         app:layout_constraintTop_toBottomOf="@+id/ans_D" />
+
+    <Button
+        android:id="@+id/previous"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_margin="1dp"
+        android:backgroundTint="@color/purple_200"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="1dp"
+        android:text="@string/previous"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_question"
+        app:layout_constraintTop_toBottomOf="@+id/submit" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

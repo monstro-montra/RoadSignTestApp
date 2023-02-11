@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     Button ansA_Btn, ansB_Btn, ansC_Btn, ansD_Btn;
     Button submitBtn;
+    Button previousBtn;
     ImageView imageQuestion;
     TextView totalQuestionsTextView;
 
@@ -36,12 +37,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ansC_Btn = findViewById(R.id.ans_C);
         ansD_Btn = findViewById(R.id.ans_D);
         submitBtn = findViewById(R.id.submit);
+        previousBtn = findViewById(R.id.previous);
 
         ansA_Btn.setOnClickListener(this);
         ansB_Btn.setOnClickListener(this);
         ansC_Btn.setOnClickListener(this);
         ansD_Btn.setOnClickListener(this);
         submitBtn.setOnClickListener(this);
+        previousBtn.setOnClickListener(this);
 
         totalQuestionsTextView.setText("Question " + (questionsIndex + 1)); //add one for readability. doesn't start at 0.
 
@@ -66,6 +69,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             totalQuestionsTextView.setText("Question " + (questionsIndex + 1));
             loadQuestion(); //go to next question after adding
 
+        } else if (clicked.getId() == R.id.previous){
+            if (questionsIndex > 0) {
+                questionsIndex--;
+                score--;
+                totalQuestionsTextView.setText("Question " + (questionsIndex + 1));
+                loadQuestion();
+            }
+
         } else { //if choices are clicked
             selectedAnswerStr = clicked.getText().toString();
             clicked.setBackgroundColor(Color.GREEN);
@@ -87,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ansD_Btn.setText(Problem.choice[questionsIndex][3]);
 
     }
+
 
     public void quizEnd(){
         totalQuestionsTextView.setText("Question " + (questionsIndex));
