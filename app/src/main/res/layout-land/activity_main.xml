@@ -22,89 +22,96 @@
 
     <ImageView
         android:id="@+id/image_question"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:contentDescription="@string/image_of_a_stop_sign"
         android:padding="16dp"
         android:src="@drawable/stop_sign"
-        app:layout_constraintBottom_toTopOf="@+id/ans_A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/total_questions"
-        app:layout_constraintVertical_bias=".20" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
         android:id="@+id/ans_A"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_margin="1dp"
         android:backgroundTint="@color/white"
         android:minWidth="0dp"
         android:minHeight="0dp"
-        android:padding="10dp"
         android:text="@string/answer_a"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/ans_B"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_question" />
+        app:layout_constraintStart_toEndOf="@+id/image_question"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/ans_B"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_margin="1dp"
         android:backgroundTint="@color/white"
-        android:padding="10dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
         android:text="@string/answer_b"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/ans_C"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_question"
         app:layout_constraintTop_toBottomOf="@+id/ans_A" />
 
     <Button
         android:id="@+id/ans_C"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_margin="1dp"
         android:backgroundTint="@color/white"
-        android:padding="10dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="1dp"
         android:text="@string/answer_c"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/ans_D"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_question"
         app:layout_constraintTop_toBottomOf="@+id/ans_B" />
 
     <Button
         android:id="@+id/ans_D"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_margin="1dp"
         android:backgroundTint="@color/white"
-        android:padding="10dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="1dp"
         android:text="@string/answer_d"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_question"
         app:layout_constraintTop_toBottomOf="@+id/ans_C" />
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginTop="320dp"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_margin="1dp"
         android:backgroundTint="@color/purple_200"
-        android:padding="10dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="1dp"
         android:text="@string/submit"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/image_question"
         app:layout_constraintTop_toBottomOf="@+id/ans_D" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

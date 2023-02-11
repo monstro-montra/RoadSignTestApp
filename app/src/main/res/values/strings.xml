@@ -4,4 +4,9 @@
     <string name="question">Question</string>
     <string name="fork_sign">Fork Sign</string>
     <string name="answer_a">Answer A</string>
+    <string name="answer_b">Answer B</string>
+    <string name="answer_c">Answer C</string>
+    <string name="answer_d">Answer D</string>
+    <string name="image_of_a_stop_sign">Image of a stop sign</string>
+    <string name="submit">Submit</string>
 </resources>
